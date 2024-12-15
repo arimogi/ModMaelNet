@@ -7,8 +7,11 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+waktu.txt
 dataset/
 checkpoints/
+results/
+logs/
 test_results/
 .Python
 build/
