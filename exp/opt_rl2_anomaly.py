@@ -152,6 +152,7 @@ class OPT_RL_Anomaly():
         test_energy = np.array(attens_energy_test)
         test_labels = np.concatenate(test_labels, axis=0).reshape(-1)
         return test_energy, test_labels
+    
     def opt_anomaly(self, setting):
         _,test_loader = self._get_data("test")
         _,thre_loader = self._get_data("threshold")
