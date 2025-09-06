@@ -1,3 +1,5 @@
+export CUDA_VISIBLE_DEVICES=0
+
 py -u run_mantra_rl.py \
   --is_training 0 \
   --root_path ./dataset/MSL/ \
@@ -5,7 +7,7 @@ py -u run_mantra_rl.py \
   --model MaelNetB1 \
   --slow_model MaelNetS1 \
   --data MSL \
-  --e_layers 2 \
+  --e_layers 3 \
   --d_layers 1 \
   --anomaly_ratio 1 \
   --factor 5 \
@@ -16,4 +18,4 @@ py -u run_mantra_rl.py \
   --gpu 0 \
   --p_hidden_dims 128 128 \
   --p_hidden_layers 2 \
-  --itr 1 &
+  --itr 1

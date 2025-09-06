@@ -6,9 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+# training result
+training_*.*
+
 # Distribution / packaging
+waktu.txt
 dataset/
 checkpoints/
+results/
+logs/
 test_results/
 .Python
 build/
@@ -140,5 +146,5 @@ dmypy.json
 #playground
 playground.py
 
-# Pltos
+# Plots
 /plots

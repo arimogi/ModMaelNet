@@ -14,10 +14,14 @@ parser.add_argument('--model_id', type=str, default='MaelNetS1_AnomalyTransforme
 parser.add_argument('--model', type=str, default='AnomalyTransformer',
                     help='model name, options: [MaelNet]')
 
+### Add folder result
+parser.add_argument('--result_dir', type=str, default='results', help='directory for the result files')
+
 # # # data loader
-parser.add_argument('--data', type=str, default='SMAP', help='dataset type')
-parser.add_argument('--root_path', type=str, default='./dataset/SMAP/', help='root path of the data file')
+parser.add_argument('--data', type=str, default='MSL', help='dataset type')
+parser.add_argument('--root_path', type=str, default='./dataset/MSL/', help='root path of the data file')
 parser.add_argument('--win_size', type=int, default=100, help='window size')
+parser.add_argument('--chunk_size', type=str, default='500', help='Chunk size. Example: 500')
 
 parser.add_argument('--features', type=str, default='M',
                     help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
@@ -143,7 +147,7 @@ if __name__ == "__main__":
 
     args.patch_size = [int(patch_index) for patch_index in args.patch_size]
     print('Args in experiment:')
-    print(args)
+    print(args, "\n")    
     # setting record of experiments
     setting = '{}_{}_ft{}_dm{}_nh{}_el{}_dl{}_df{}_fc{}_eb{}_dt{}'.format(
         args.model_id,
