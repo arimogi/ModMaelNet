@@ -2,7 +2,7 @@ export CUDA_VISIBLE_DEVICES=0
 
 python -u run_anomaly.py \
   --is_training 1 \
-  --root_path ./dataset/MSL/ \
+  --root_path ./datasets/anomaly/MSL/ \
   --model_id MaelNetS2_AnomalyTransformer_DCDetector_RL_TA\
   --model MaelNetS2 \
   --is_slow_learner true \
@@ -23,4 +23,4 @@ python -u run_anomaly.py \
   --des 'TA' \
   --p_hidden_dims 128 128 \
   --p_hidden_layers 2 \
-  --itr 1 &
+  --itr 1
